@@ -231,14 +231,13 @@
     -->
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
-       function SendEmail(){
-         Email.send({
-    Host : "smtp.gmail.com",
-    Username : "mgigofficial@gmail.com",
-    Password : "IMSNOIDA",
+       Email.send({
+    Host : "smtp.elasticemail.com",
+    Username : "ak4426503@gmail.com",
+    Password : "5793B55B4F3C4D3AE0C763629887E72648B3",
     To : 'abhishekains@gmail.com',
-    From : document.getElementById("email").value,
-    Subject : "New Contact Form Enquiry",
+    From : "ak4426503@gmail.com",
+    Subject : "New Massage received",
     Body : "And this is the body"
 }).then(
   message => alert(message)
