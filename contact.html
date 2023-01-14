@@ -76,16 +76,16 @@
                 <form onsubmit="SendEmail(); reset(); return false;" method="post" data-form-title="CONTACT US">
                   <input type="hidden" data-form-email="true">
                   <div class="form-group">
-                    <input type="text" class="form-control m-2" name="name" id="name1" required="" placeholder="Name*" data-form-field="Name">
+                    <input type="text" class="form-control m-2" name="name" id="name" required="" placeholder="Name*" data-form-field="Name">
                   </div>
                   <div class="form-group">
-                    <input type="email" class="form-control m-2" name="email" id="email1" required="" placeholder="Email*" data-form-field="Email">
+                    <input type="email" class="form-control m-2" name="email" id="email" required="" placeholder="Email*" data-form-field="Email">
                   </div>
                   <div class="form-group">
-                    <input type="tel" class="form-control m-2" name="phone" id="phone1" placeholder="Phone" data-form-field="Phone">
+                    <input type="tel" class="form-control m-2" name="phone" id="phone" placeholder="Phone" data-form-field="Phone">
                   </div>
                   <div class="form-group">
-                    <textarea class="form-control m-2" name="message" id="message1" placeholder="Message" rows="7" data-form-field="Message"></textarea>
+                    <textarea class="form-control m-2" name="message" id="message" placeholder="Message" rows="7" data-form-field="Message"></textarea>
                   </div>
                   <div>
                     <button type="submit" class="btn btn-lg btn-primary m-2">CONTACT US</button>
@@ -229,20 +229,20 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
     -->
-    <script src="https://smtpjs.com/v3/smtp.js">
+      <script src="https://smtpjs.com/v3/smtp.js"></script>
+      <script>
        function SendEmail(){
          Email.send({
-    secureToken:"a108fa6e-4b0f-4804-9187-a7b49d5b2709",
-    To : 'mgigofficial@gmail.com',
-    From : document.getElementById("email1").value,
-    Subject : "New Contact form enquiry",
-    Body : "Name" + document.getElementById("name1").value
-    + "<br> Phone No: " + document.getElementById("phone1")
-    + "<br> Message: " + document.getElementById("message1")
-
-       }).then(
-        message => alert("message Sent Success")
-         );
+    Host : "smtp.gmail.com",
+    Username : "mgigofficial@gmail.com",
+    Password : "IMSNOIDA",
+    To : 'abhishekains@gmail.com',
+    From : document.getElementById("email").value,
+    Subject : "New Contact Form Enquiry",
+    Body : "And this is the body"
+}).then(
+  message => alert(message)
+);
      }
      </script>
 
