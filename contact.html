@@ -73,7 +73,7 @@
                 <div>
                   <h2>CONTACT US</h2>
                 </div>
-                <form onsubmit="SendEmail(); reset(); return false;" method="post" data-form-title="CONTACT US">
+                <form onsubmit="mailform(); SendEmail(); reset(); return false;" method="post" data-form-title="CONTACT US">
                   <input type="hidden" data-form-email="true">
                   <div class="form-group">
                     <input type="text" class="form-control m-2" name="name" id="name" required="" placeholder="Name*" data-form-field="Name">
@@ -231,6 +231,7 @@
     -->
       <script src="https://smtpjs.com/v3/smtp.js"></script>
       <script>
+        function mailform() {
        Email.send({
     Host : "smtp.elasticemail.com",
     Username : "ak4426503@gmail.com",
@@ -242,7 +243,7 @@
 }).then(
   message => alert(message)
 );
-     }
+     }};
      </script>
 
   </body>
